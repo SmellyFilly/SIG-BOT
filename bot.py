@@ -1,8 +1,7 @@
 import os
 
 import discord
-
-commands = discord.ext.commands
+from discord.ext import commands
 
 print("Logging in...")
 bot = commands.Bot(command_prefix="[",
