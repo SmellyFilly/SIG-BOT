@@ -46,18 +46,22 @@ Then add a remote repository.
 git remote add upstream git@github.com:SmellyFilly/SIG-BOT.git
 ```
 
-Then do some work on the local git. Once completed, create a branch for the context of what you're doing (bug fixing branch off master, creating a feature branch off develop).
+Create a branch for the context of what you're doing (bug fixing branch off master, creating a feature branch off develop).
+
+Branch name example, creating a branch for a new extension: `feature/new-extension`
 
 ```
 git checkout <branch name>
 git pull upstream <branch name> && git push origin <branch name>
-git checkout -b <new branch name (hotfix/feature)>
+git checkout -b <new branch name (hotfix/feature)> <develop/master>
 ```
 
 That will check you're on the respective branch, pull new changes from that branch and push syncs it locally. Then a new branch is created.
-From there, you will need to create a PR. This is when you push.
+From there, do some work on the local git. Once completed, you will need to create a PR. This is when you push.
 
 ```
+git add .
+git commit -m "brief desc of changes"
 git push -u origin <new banch name from before>
 ```
 
