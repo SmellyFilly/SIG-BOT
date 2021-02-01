@@ -5,6 +5,17 @@ The bot is a community project where anyone can create a branch and work on any 
 
 This project is designed with beginners in mind, please feel free to contribute at any skill level. We will only be supportive and accommodating!
 
+## Repository Details:
+
+The entire project is coded in Python using the discord.py API. Bot tokens and api secrets are created and operated by the repository maintainers only.
+When testing and developing please use your own API keys/secrets but then merge with the original place holder keys/secrets.
+
+As this is a public and open source repository, please comment your code and ensure its readable. Uncommented code will be rejected.
+
+Discord.py API reference: https://discordpy.readthedocs.io/en/latest/api.html
+Discord API reference: https://discord.com/developers/docs/intro
+SQLAlchemy ORM Documentation and Reference: https://docs.sqlalchemy.org/en/13/#sqlalchemy-orm
+
 # Get started contributing!
 
 Download git here: https://gitforwindows.org/
@@ -51,3 +62,26 @@ git push -u origin <new banch name from before>
 Then go on github, go to your branch and click "Compare & Pull Request".
 
 This will create a review on your code with the maintainers of the repository. Then if approved it will be merged into master/develop then into master!
+
+# Creating an Extension
+
+To create an extension, you must first create the Cog Class.
+
+```python
+from discord.ext import commands
+
+
+class CogName(commands.Cog):
+    def __init__(self, bot):
+        self.bot = bot
+
+
+def setup(bot):
+    bot.add_cog(CogName(bot))
+
+```
+
+From here, all your commands will be placed inside the class. Using the decorator `@commands.command()`.
+Before working on a feature please look through the other extensions to understand the structure of the code requried.
+
+Refer to the discord.py API reference for more information on cogs/extensions (same thing but different).
