@@ -81,7 +81,7 @@ def setup(bot):
 
 ```
 
-From here, all your commands will be placed inside the class. Using the decorator `@commands.command()`.
+From here, all your commands will be placed inside the class, using the decorator `@commands.command()`.
 Before working on a feature please look through the other extensions to understand the structure of the code requried.
 
 Refer to the discord.py API reference for more information on cogs/extensions (same thing but different).
