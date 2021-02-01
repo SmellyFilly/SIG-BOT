@@ -8,6 +8,7 @@ class Moderation(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
 
+    # Kicks the mentioned/id'd user
     @commands.command(name="kick")
     @commands.has_permissions(kick_member=True)
     async def kick_cmd(self, ctx, user:discord.Member, *, reason:str="No reason."):
@@ -22,6 +23,7 @@ class Moderation(commands.Cog):
         else:
             await ctx.send(f"{ctx.author.mention}, you don't have enough permissions to kick this person.")
     
+    # Bans the mentioned/id'd user
     @commands.command(name="ban")
     @commands.has_permissions(ban_member=True)
     async def ban_cmd(self, ctx, user:discord.Member, *, reason:str="No reason."):
