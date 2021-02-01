@@ -13,7 +13,9 @@ When testing and developing please use your own API keys/secrets but then merge 
 As this is a public and open source repository, please comment your code and ensure its readable. Uncommented code will be rejected.
 
 Discord.py API reference: https://discordpy.readthedocs.io/en/latest/api.html
+
 Discord API reference: https://discord.com/developers/docs/intro
+
 SQLAlchemy ORM Documentation and Reference: https://docs.sqlalchemy.org/en/13/#sqlalchemy-orm
 
 # Get started contributing!
